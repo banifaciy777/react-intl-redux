@@ -2,7 +2,7 @@ import { connect } from 'react-redux'
 import { IntlProvider } from 'react-intl'
 
 function defaultSelector(state) {
-  const { intl } = state
+  const intl = state.get('intl');
   return {
     key: intl.locale,
     ...intl
